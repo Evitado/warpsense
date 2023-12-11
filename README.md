@@ -30,6 +30,11 @@ This repo contains `warpsense` and `fastsense`, both SLAM approaches *highly tai
 * fully configurable
 * Usable on embedded ARM devices: reduction of ROS networking overhead
 
+# Additional build instrcutions
+* use PCL version 1.10
+* use this specific commit from fast_vgicp aff82ee0778178b8942e2d4d31855c0d8421ac3b
+*
+
 Both approaches are evaluated in the [evaluation chapter](#evaluation)
 
 ![](misc/chemnitz.png)
