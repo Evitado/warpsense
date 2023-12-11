@@ -1,12 +1,12 @@
 # Parameters of Lidar Sensor
 lidar:
-  channels: 128                           # number of horizontal scan lines
+  channels: 64                           # number of horizontal scan lines
   vfov: 45.0                              # vertical field of view of scanner
   hresolution: 1024                       # horizontal resolution used in bagfile/sensor
 
 # Featsense Parameters
 floam:
-  pcl_topic: "/ouster/points"             # which lidar topic to listen to
+  pcl_topic: "/main/points"             # which lidar topic to listen to
   min_distance: 2.0                       # minimum distance of points used for registration
   max_distance: 50.0                      # maximum distance of points used for registration. May need to be reduced in highly irregular environment, e.g. Dreikaiserstuhl
   edge_resolution: 0.4                    # subsampling resolution of edge map
@@ -21,14 +21,14 @@ floam:
 registration:
   max_iterations: 200                     # maximum number of optimization iterations allowed
   it_weight_gradient: 0.1                 # damping parameter for optimization
-  lidar_topic: "/ouster/points"           # lidar topic to listen to
-  imu_topic: "/ouster/imu"                # IMU topic to listen to
+  lidar_topic: "/main/points"           # lidar topic to listen to
+  imu_topic: "/main/imu"                # IMU topic to listen to
   link: "base_link"                       # link used to publish transform, e.g. <link> -> map
   epsilon: 0.03                           # optimization is stopped after changes < epsilon since last iteration
 
 # Map Parameters (Warpsense/Featsense)
 map:
-  dir: "/home/julian/dev"                 # directory to save map in
+  dir: "/home/s/Desktop/evitado"                 # directory to save map in
   comment: "test"                         # additional comment that will determine final filename
   max_distance: 1.0                       # maximum truncation distance (m)
   update_distance: 0.25                   # TSDF update frequency dependent on distance travelled (m)

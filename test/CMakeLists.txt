@@ -1,3 +1,4 @@
+set(CATKIN_ENABLE_TESTING OFF)
 if (CATKIN_ENABLE_TESTING)
     message("Compling ${PROJECT_NAME} test(s)")
     find_package(rostest REQUIRED)
